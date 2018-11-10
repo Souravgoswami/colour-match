@@ -23,7 +23,7 @@ def main
 	stat_bg.opacity = 0.2
 
 	read_score = File.readlines('data/data').last(7).map(&:to_i)
-	score = read_score[-1]
+	score = read_score[-1].to_i
 
 	if score <  600 then iqtype, you_in = 'Very Low', 0
 		elsif score < 1200 then iqtype, you_in = 'Low', 1
